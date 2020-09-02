@@ -1,17 +1,14 @@
-import { ApolloClient, InMemoryCache } from "@apollo/client";
 import { ApolloProvider } from "@apollo/client";
+import { client } from "../apolloConfig";
 
 import Home from "./Home";
 
-const client = new ApolloClient({
-  uri: "https://landing-test-gql-endpoint.miimosa.net/graphql",
-  cache: new InMemoryCache(),
-});
-
-export default function App() {
+const App = () => {
   return (
     <ApolloProvider client={client}>
       <Home />
     </ApolloProvider>
   );
-}
+};
+
+export default App;
