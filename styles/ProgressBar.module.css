@@ -1,0 +1,5 @@
+.progress_bar .MuiLinearProgress-root {
+  height: 10px;
+  border-radius: 10px;
+  margin-bottom: 6px;
+}
