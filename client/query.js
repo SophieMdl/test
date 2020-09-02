@@ -18,7 +18,7 @@ export const GET_ALL_PROJECTS = gql`
 `;
 
 export const GET_PROJECT = gql`
-  query GetProject {
+  query GetProject($id: String!) {
     project(id: $id) {
       title
       status

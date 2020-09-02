@@ -31,8 +31,8 @@ const Home = () => {
             const { id, user, collected, target, title, status } = project;
 
             return (
-              <Link href={`/${id}`}>
-                <Card className={styles.card} key={id}>
+              <Link href={`/${id}`} key={id}>
+                <Card className={styles.card}>
                   <img
                     className={styles.card_image}
                     src={project.image_url || "https://via.placeholder.com/500"}
