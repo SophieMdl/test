@@ -8,7 +8,7 @@ import ProgressBar from "../components/ProgressBar.js";
 const Project = () => {
   const router = useRouter();
   const { data, loading } = useQuery(GET_PROJECT, {
-    variables: { id: "c6d6f6f9-07d8-4540-87a7-3b8ff8869f55" },
+    variables: { id: router.query.id },
   });
 
   return (
@@ -20,11 +20,11 @@ const Project = () => {
         <CircularProgress />
       ) : (
         <>
-          <h2>{data.project.title}</h2>
+          <h1>{data.project.title}</h1>
           <img
             className={styles.project_image}
             src={data.project.image_url || "https://via.placeholder.com/2000"}
-            width="100%"
+            alt={data.project.title}
           />
           <Box
             display="flex"

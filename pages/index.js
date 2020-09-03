@@ -21,7 +21,7 @@ const App = () => {
   const { loading, data } = useQuery(GET_ALL_PROJECTS);
   return (
     <Container>
-      <h2>Projets</h2>
+      <h1>Projets</h1>
       {loading ? (
         <CircularProgress />
       ) : (
@@ -35,7 +35,7 @@ const App = () => {
                   <img
                     className={styles.card_image}
                     src={project.image_url || "https://via.placeholder.com/500"}
-                    title={project.title}
+                    alt={project.title}
                   />
                   <CardContent>
                     <h3>
