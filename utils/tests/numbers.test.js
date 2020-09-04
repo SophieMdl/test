@@ -1,3 +1,4 @@
+// TODO : configure babel for import
 import { getPercentage } from "../numbers.js";
 
 test("get simple percentage", () => {
