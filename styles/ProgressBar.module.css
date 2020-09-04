@@ -1,5 +1,14 @@
-.progress_bar .MuiLinearProgress-root {
+.progress_bar {
+  position: relative;
   height: 10px;
+  max-width: 250px;
   border-radius: 10px;
   margin-bottom: 6px;
+  background: #c0c0c0;
+}
+.progress_bar__content {
+  position: absolute;
+  height: 100%;
+  background: blue;
+  border-radius: 10px;
 }

@@ -1,4 +1,4 @@
-import { formatNumber, getPercentage } from "../numbers.js";
+import { getPercentage } from "../numbers.js";
 
 test("get simple percentage", () => {
   expect(getPercentage(30, 100)).toBe(30);
@@ -10,4 +10,8 @@ test("get rounded result", () => {
 
 test("with float number", () => {
   expect(getPercentage(48.5, 150.3)).toBe(32);
+});
+
+test("Does not overcome 100", () => {
+  expect(getPercentage(103, 100)).toBe(100);
 });

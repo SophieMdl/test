@@ -32,6 +32,14 @@
   border-color: #0070f3;
 }
 
+.icon {
+  padding: 6px;
+}
+
+.green-icon {
+  color: green;
+}
+
 @media (max-width: 600px) {
   .grid {
     width: 100%;

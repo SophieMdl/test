@@ -1,3 +1,4 @@
+import React from "react";
 import styles from "../styles/Home.module.css";
 import { CheckCircle, Cancel } from "@material-ui/icons";
 import Link from "next/link";
@@ -7,13 +8,14 @@ import {
   Typography,
   Container,
   CircularProgress,
+  Box,
 } from "@material-ui/core";
 import { useQuery } from "@apollo/client";
 import { GET_ALL_PROJECTS } from "../client/query.js";
 import ProgressBar from "../components/ProgressBar.js";
 
 const icons = {
-  success: <CheckCircle />,
+  success: <CheckCircle style={{ color: "green" }} />,
   failed: <Cancel color="error" />,
 };
 
@@ -39,7 +41,9 @@ const App = () => {
                   />
                   <CardContent>
                     <h3>
-                      {title} {icons[status]}
+                      <Box display="flex">
+                        {title} {icons[status]}
+                      </Box>
                     </h3>
                     <Typography color="textSecondary">
                       {user.first_name} {user.last_name}

@@ -1,13 +1,15 @@
-import { LinearProgress } from "@material-ui/core";
+import React from "react";
 import { formatNumber, getPercentage } from "../utils/numbers";
 import styles from "../styles/ProgressBar.module.css";
 
 const ProgressBar = ({ initial, target }) => (
-  <div className={styles.progress_bar}>
-    <LinearProgress
-      variant="determinate"
-      value={initial >= target ? 100 : getPercentage(initial, target)}
-    />
+  <div>
+    <div className={styles.progress_bar}>
+      <div
+        className={styles.progress_bar__content}
+        style={{ width: `${getPercentage(initial, target)}%` }}
+      ></div>
+    </div>
     {formatNumber(initial)} / {formatNumber(target)}
   </div>
 );
